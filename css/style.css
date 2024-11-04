@@ -1,56 +1,6 @@
-.text-primary {
-    color: #00275b !important;
-}
 
-.texto-borde {
-	color: white !important;
-}
-
-.navbar-brand .p-0 .text-primary .texto-borde
-{
-  color: #00275b !important;	
-}
-
-.navbar.sticky-top .text-primary.texto-borde {
-    color: #00275b !important; 
-}
-
-.carousel .carousel-inner .carousel-item .carousel-caption-2
-{	
-	background: linear-gradient(rgba(0, 0, 0, .2), rgba(0, 0, 0, 0.2)) !important;
-}
-.navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-nav .nav-link.active {
-    color: #e57660 !important;
-}
-
-@media (min-width: 992px) {
-    .navbar-light .navbar-nav .nav-item::after {
-        content: "";
-        position: absolute;
-        bottom: 1px;
-        left: 50%;
-        transform: translateX(-50%);
-        border: 10px solid;
-        border-color: transparent transparent  #e57660  transparent !important;
-        opacity: 0;
-        transition: 0.5s;
-    }
-
-@media (min-width: 992px) {
-    @media (min-width: 992px) {
-        .navbar-light .navbar-nav .nav-item::before {
-            position: absolute;
-            content: "";
-            width: 0;
-            height: 2px;
-            bottom: -1px;
-            left: 50%;
-            background: #e57660 !important;
-            transition: .5s;
-        }
-    }
-}
-	
+/*** Spinner Start ***/
+/*** Spinner ***/
 #spinner {
     opacity: 0;
     visibility: hidden;
@@ -127,6 +77,7 @@
 
 .btn.btn-secondary {
     color: var(--bs-white);
+	background-color: darkslategrey;
    
 }
 
@@ -146,6 +97,7 @@
     font-weight: 400;
     outline: none;
     transition: .5s;
+    color: white !important;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -242,11 +194,12 @@
         border-left: 0;
         border-style: dotted;
         z-index: 999;
+		background-color: #17486d
     }
     
     .sticky-top.navbar-light {
         position: fixed;
-        background: var(--bs-light);
+		background-color: #17486d
         border: none;
     }
 
@@ -910,17 +863,19 @@
 
 /*** Footer Start ***/
 .footer {
-    background: var(--bs-dark);
+    
+		background-color: #17486d;
 }
 
 .footer .footer-item a {
     line-height: 35px;
-    color: var(--bs-body);
+    color: white;
     transition: 0.5s;
 }
 
 .footer .footer-item p {
     line-height: 35px;
+	color: white;
 }
 
 .footer .footer-item a:hover {
@@ -931,6 +886,7 @@
 .footer .footer-item .footer-btn a,
 .footer .footer-item .footer-btn a i {
     transition: 0.5s;
+	
 }
 
 .footer .footer-item .footer-btn a:hover {
@@ -939,13 +895,15 @@
 
 .footer .footer-item .footer-btn a:hover i {
     color: var(--bs-primary) !important;
+	
 }
 /*** Footer End ***/
 
 /*** copyright Start ***/
 .copyright {
     border-top: 1px solid rgba(255, 255, 255, 0.08);
-    background: var(--bs-dark);
+    
+		background-color: #17486d
 }
 /*** copyright end ***/
 
