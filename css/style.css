@@ -98,6 +98,7 @@
     outline: none;
     transition: .5s;
     color: white !important;
+	background-color: #17486d;
 }
 
 .sticky-top.navbar-light .navbar-nav .nav-link {
@@ -130,7 +131,7 @@
 
 .dropdown .dropdown-menu a:hover {
     background: var(--bs-primary);
-    color: var(--bs-white);
+    color: #17486d;
 }
 
 .navbar .nav-item:hover .dropdown-menu {
@@ -143,14 +144,15 @@
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
-        position: relative;
-        background: var(--bs-white);
+        position: relative;        
+		background-color: #17486d;
     }
 
     .navbar.navbar-expand-lg .navbar-toggler {
         padding: 10px 20px;
         border: 1px solid var(--bs-primary);
-        color: var(--bs-primary);
+        color: var(--bs-primary);		
+		background-color: #17486d;
     }
 
     .navbar-light .navbar-collapse {
@@ -181,6 +183,7 @@
         border-radius: 10px;
         transition: .5s;
         opacity: 0;
+		background-color: #17486d
     }
 
     .navbar-light {
@@ -194,7 +197,7 @@
         border-left: 0;
         border-style: dotted;
         z-index: 999;
-		background-color: #17486d
+		background-color: #17486d;
     }
     
     .sticky-top.navbar-light {
@@ -210,12 +213,13 @@
         height: 2px;
         bottom: -1px;
         left: 50%;
-        background: var(--bs-primary);
+		background-color: #17486d;
         transition: .5s;
     }
 
     .sticky-top.navbar-light .navbar-nav .nav-item::before {
-        bottom: 0;
+        bottom: 0;		
+		background-color: #17486d;
     }
 
     .navbar-light .navbar-nav .nav-item::after {
