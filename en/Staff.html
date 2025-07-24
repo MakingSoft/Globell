@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Gordó Llobell</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cormorant,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+        
+        <style>
+        .section-title {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 3rem;
+            color: var(--dark-color);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            left: 25%;
+        }
+        
+        .team-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-bottom: 30px;
+            border: none;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        
+        .team-img {
+            height: 450px;
+            object-fit: cover;
+            object-position: top;
+            width: 100%;
+        }
+        
+        .team-position {
+            color: var(--secondary-color);
+            font-weight: 600;
+        }
+        
+        .team-social {
+            background: rgba(0,0,0,0.03);
+            padding: 15px 0;
+        }
+        
+        .team-social a {
+            color: var(--dark-color);
+            margin: 0 10px;
+            transition: color 0.3s;
+        }
+        
+        .team-social a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .team-email {
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .team-email:hover {
+            color: var(--accent-color);
+        }
+        
+        .department-section {
+            margin-bottom: 4rem;
+        }
+        
+        .department-title {
+            background: var(--primary-color);
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 2rem;
+        }
+        
+        .team-list-item {
+            margin-bottom: 1.5rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+            transition: transform 0.3s;
+        }
+        
+        .team-list-item:hover {
+            transform: translateX(5px);
+        }
+        
+        .team-list-name {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-list-email {
+            color: var(--secondary-color);
+        }
+        
+        .floating-shapes {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .shape {
+            position: absolute;
+            opacity: 0.1;
+            border-radius: 50%;
+        }
+        
+        .shape-1 {
+            width: 300px;
+            height: 300px;
+            background: var(--secondary-color);
+            top: -100px;
+            right: -100px;
+        }
+        
+        .shape-2 {
+            width: 200px;
+            height: 200px;
+            background: var(--accent-color);
+            bottom: -50px;
+            left: -50px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+      <!-- Navbar Start -->
+        <div class="container-fluid position-relative p-0">
+        <nav class="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0">
+        <div class="container-fluid px-0 d-flex justify-content-between align-items-center w-100">
+
+            <!-- Left Logo -->
+            <a href="index.html" class="navbar-brand p-0 me-4">
+                <img src="../img/LogoGLL-ArribIzq.png" alt="Logo" style="height: 40px;">
+            </a>
+
+            <!-- Centered Menu -->
+            <div class="d-none d-lg-flex flex-grow-1 justify-content-center">
+                <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+                    <div class="navbar-nav py-0">
+                        <a href="index.html" class="nav-item nav-link active">Home</a>
+
+                        <!-- Institutional Submenu -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Institutional</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="Historia.html" class="dropdown-item">History</a>
+                                <a href="Staff.html" class="dropdown-item">Team</a>
+                            </div>
+                        </div>
+
+                        <!-- Practice Areas Submenu -->
+                        <div class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Practice Areas</a>
+                            <div class="dropdown-menu rounded-0 m-0">
+                                <a href="PropiedadIntelectual.html" class="dropdown-item">Intellectual Property</a>
+                                <a href="AsuntosRegulatorios.html" class="dropdown-item">Regulatory Affairs</a>
+                            </div>
+                        </div>
+
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="d-none d-lg-flex align-items-center ms-4">
+                <img src="../img/btn-gl.png" alt="Button" style="height: 40px;">
+            </div>
+        </div>
+    </nav>
+        <!-- Navbar End -->
+
+        <!-- Partners Section -->
+        <section class="container py-5">
+            <br><br><br>
+            <br>
+            <h2 class="section-title text-center">Partners</h2>
+            <div class="row">
+                <!-- Partner 1 -->
+                <div class="col-md-4">
+                    <div class="team-card h-100">
+                        <img src="../img/team-2.JPG" alt="Ricardo Vicente Gordó Llobell" class="team-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Ricardo Vicente</h4>
+                            <h5 class="card-subtitle mb-2">Gordó Llobell</h5>
+                            <p class="team-position">Founding Partner</p>
+                            <a href="mailto:rvgll@gllobell.com.ar" class="team-email">rvgll@gllobell.com.ar</a>
+                        </div>
+                        <div class="team-social text-center">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Partner 2 -->
+                <div class="col-md-4">
+                    <div class="team-card h-100">
+                        <img src="../img/team-1.JPG" alt="Ricardo Martín Gordó Llobell" class="team-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Ricardo Martín</h4>
+                            <h5 class="card-subtitle mb-2">Gordó Llobell</h5>
+                            <p class="team-position">Partner</p>
+                            <a href="mailto:rmgll@gllobell.com.ar" class="team-email">rmgll@gllobell.com.ar</a>
+                        </div>
+                        <div class="team-social text-center">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Partner 3 -->
+                <div class="col-md-4">
+                    <div class="team-card h-100">
+                        <img src="../img/team-3.JPG" alt="María Gabriela Gordó Llobell" class="team-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">María Gabriela</h4>
+                            <h5 class="card-subtitle mb-2">Gordó Llobell</h5>
+                            <p class="team-position">Partner</p>
+                            <a href="mailto:mggll@gllobell.com.ar" class="team-email">mggll@gllobell.com.ar</a>
+                        </div>
+                        <div class="team-social text-center">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Associates Section -->
+        <section class="container py-5">
+            
+            <h2 class="section-title text-center">Associates</h2>
+            <div class="row">
+                <!-- Associate 1 -->
+                <div class="col-md-4">
+                    <div class="team-card h-100">
+                        <img src="../img/Prosperi.png" alt="Lionel Ignacio Prosper" class="team-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Lionel Ignacio</h4>
+                            <h5 class="card-subtitle mb-2">Prosper</h5>
+                            <p class="team-position">Associate</p>
+                            <a href="mailto:pl@gllobell.com.ar" class="team-email">pl@gllobell.com.ar</a>
+                        </div>
+                        <div class="team-social text-center">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Associate 2 -->
+                <div class="col-md-4">
+                    <div class="team-card h-100">
+                        <img src="../img/Oscar.png" alt="Marcelo Oscar García Sellart" class="team-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">Marcelo Oscar</h4>
+                            <h5 class="card-subtitle mb-2">García Sellart</h5>
+                            <p class="team-position">Associate</p>
+                            <a href="mailto:mogs@gllobell.com.ar" class="team-email">mogs@gllobell.com.ar</a>
+                        </div>
+                        <div class="team-social text-center">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Associate 3 -->
+                <div class="col-md-4">
+                    <div class="team-card h-100">
+                        <img src="../img/cavoti.jpg" alt="María Dolores Cavoti Sadonio" class="team-img">
+                        <div class="card-body text-center">
+                            <h4 class="card-title">María Dolores</h4>
+                            <h5 class="card-subtitle mb-2">Cavoti Sadonio</h5>
+                            <p class="team-position">Associate</p>
+                            <a href="mailto:dc@gllobell.com.ar" class="team-email">dc@gllobell.com.ar</a>
+                        </div>
+                        <div class="team-social text-center">
+                            <a href="#"><i class="fab fa-linkedin"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Section -->
+        <section class="container py-5">
+            
+            <!-- Trademark Matters -->
+            <div class="department-section">
+                <div class="department-title">
+                    <h3 class="mb-0"><i class="fas fa-copyright me-2"></i> Trademark Matters</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">María Nora Páez</h5>
+                            <a href="mailto:np@gllobell.com.ar" class="team-list-email">np@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Paula Arbetman</h5>
+                            <a href="mailto:pa@gllobell.com.ar" class="team-list-email">pa@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Josefina Aida Dolenz</h5>
+                            <a href="mailto:marcas@gllobell.com.ar" class="team-list-email">marcas@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Lucia Malanca</h5>
+                            <a href="mailto:asistentelegales@gllobell.com.ar" class="team-list-email">asistentelegales@gllobell.com.ar</a>
+                        </div>
+                    </div>
+					<div class="col-md-3">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Natalia Majcherczyk</h5>
+                            <a href="mailto:asistentemarcas@gllobell.com.ar" class="team-list-email">asistentemarcas@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Regulatory Affairs -->
+            <div class="department-section">
+                <div class="department-title">
+                    <h3 class="mb-0"><i class="fas fa-clipboard-check me-2"></i> Regulatory Affairs</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Georgina Natalia Salvatore</h5>
+                            <a href="mailto:gns@gllobell.com.ar" class="team-list-email">gns@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Carolina Belen Rios</h5>
+                            <a href="mailto:gestionregulacion@gllobell.com.ar" class="team-list-email">gestionregulacion@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Ana Claudia Tombo</h5>
+                            <a href="mailto:productos@gllobell.com.ar" class="team-list-email">productos@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Gisele Valeria Coscia</h5>
+                            <a href="mailto:gvc@gllobell.com.ar" class="team-list-email">gvc@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Marcia Soledad Lema</h5>
+                            <a href="mailto:msl@gllobell.com.ar" class="team-list-email">msl@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Romina Gauna</h5>
+                            <a href="mailto:alimentos@gllobell.com.ar" class="team-list-email">alimentos@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">María Florencia Caradonna</h5>
+                            <a href="mailto:mc@gllobell.com.ar" class="team-list-email">mc@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Carolina Andrea Pavanetto</h5>
+                            <a href="mailto:inscripciones@gllobell.com.ar" class="team-list-email">inscripciones@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Santiago Mendiburu</h5>
+                            <a href="mailto:regulacion@gllobell.com.ar" class="team-list-email">regulacion@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Melina Kalmanovich</h5>
+                            <a href="mailto:alimentos3@gllobell.com.ar" class="team-list-email">alimentos3@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Dario Hernan Giorno</h5>
+                            <a href="mailto:aarr@gllobell.com.ar" class="team-list-email">aarr@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Daiana Navarro Diaz</h5>
+                            <a href="mailto:aarr2@gllobell.com.ar" class="team-list-email">aarr2@gllobell.com.ar</a>
+                        </div>
+                    </div>
+					<div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Valentina Priolo Llera</h5>
+                            <a href="mailto:alimentos3@gllobell.com.ar" class="team-list-email">alimentos3@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Administration -->
+            <div class="department-section">
+                <div class="department-title">
+                    <h3 class="mb-0"><i class="fas fa-calculator me-2"></i> Administration</h3>
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Claudio Javier Petrecca</h5>
+                            <a href="mailto:adm@gllobell.com.ar" class="team-list-email">adm@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Facundo Mariano Angeletti</h5>
+                            <a href="mailto:asistenteadm@gllobell.com.ar" class="team-list-email">asistenteadm@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="team-list-item text-center">
+                            <h5 class="team-list-name">Camila Tamara Rojas</h5>
+                            <a href="mailto:nsb@gllobell.com.ar" class="team-list-email">nsb@gllobell.com.ar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+            
+            
+            <!-- Footer Start -->
+            <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+                <div class="container py-5">
+                    <div class="row g-5 mb-5 align-items-center">
+                       
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                                <div class="footer-item">
+                                    <h3 class="text-white mb-4"><img src="../img/footer1-300x72.png" alt="Logo" style="height: 40px;"></h3>
+                                    <p class="mb-3">Gordó Llobell & Associates provides personalized, high-quality service that meets the highest professional standards.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                            <h4 class="text-white mb-4">Links</h4>
+                            <a href="AsuntosRegulatorios.html"><i class="fas fa-angle-right me-2"></i> Regulatory Affairs</a>
+                            <a href="PropiedadIntelectual.html"><i class="fas fa-angle-right me-2"></i> Intellectual Property</a>
+                            <a href="Historia.html"><i class="fas fa-angle-right me-2"></i> Institutional</a>
+                            <a href="contact.html"><i class="fas fa-angle-right me-2"></i> Contact</a>
+                        </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                                <h4 class="text-white mb-4">Business Hours</h4>
+                                <div class="mb-3">
+                                    <h6 class="text-white mb-0">Monday to Friday</h6>
+                                    <p class="text-white mb-0">09:00 am to 6:00 pm</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-6 col-xl-3">
+                            <div class="footer-item d-flex flex-column">
+                                <h4 class="text-white mb-4">Contact Info</h4>
+                                <a href="#"><i class="fa fa-map-marker-alt me-2"></i> Sarmiento 944, 2nd Floor C1041AAT -Buenos Aires- Argentina</a>
+                                <a href="mailto:info@gllobell.com.ar"><i class="fas fa-envelope me-2"></i> info@gllobell.com.ar</a>
+                                <a href="../tel:+54 11 4394-0050"><i class="fab fa-whatsapp me-2"></i>(+54 11) 4394-0050</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Footer End -->
+            
+            <!-- Copyright Start -->
+            <div class="container-fluid copyright py-4">
+                <div class="container">
+                    <div class="row g-4 align-items-center">
+                        <div class="col-md-6 text-center text-md-start mb-md-0">
+                            <span class="text-body"><a href="#" class="border-bottom text-white"><i class="fas fa-copyright text-light me-2"><span id="current-year"></span> </i>Gordó Llobell</a>, All rights reserved.</span>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end text-body">                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <script>
+            document.getElementById('current-year').textContent = " " + new Date().getFullYear();
+            </script>
+            <!-- Copyright End -->
+
+            <!-- Back to Top -->
+            <a href="#" class="btn btn-secondary btn-lg-square rounded-circle back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+            <!-- JavaScript Libraries -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+            <script src="../lib/wow/wow.min.js"></script>
+            <script src="../lib/easing/easing.min.js"></script>
+            <script src="../lib/waypoints/waypoints.min.js"></script>
+            <script src="../lib/counterup/counterup.min.js"></script>
+            <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+
+            <!-- Template Javascript -->
+            <script src="../js/main.js"></script>
+    </body>
+
+</html>
